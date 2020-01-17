@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Sep 19 20:18:13 2019
+# Process ID: 6724
+# Current directory: F:/codes vivado/Hit_rat/project_9_05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10176 F:\codes vivado\Hit_rat\project_9_05\project_9_05.xpr
+# Log file: F:/codes vivado/Hit_rat/project_9_05/vivado.log
+# Journal file: F:/codes vivado/Hit_rat/project_9_05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/codes vivado/Hit_rat/project_9_05/project_9_05.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/Vivado/loadpath/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 813.063 ; gain = 201.703
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Sep 19 20:21:55 2019] Launched synth_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Sep 19 20:24:07 2019] Launched impl_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcsg324-1
+Top: VGA
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 892.863 ; gain = 76.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'VGA' [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:22]
+	Parameter hsync_end bound to: 10'b0001011111 
+	Parameter hdat_begin bound to: 10'b0010001111 
+	Parameter hdat_end bound to: 10'b1100001111 
+	Parameter hpixel_end bound to: 10'b1100011111 
+	Parameter vsync_end bound to: 10'b0000000001 
+	Parameter vdat_begin bound to: 10'b0000100010 
+	Parameter vdat_end bound to: 10'b1000000010 
+	Parameter vline_end bound to: 10'b1000001100 
+	Parameter tick bound to: 50000000 - type: integer 
+	Parameter DVSR bound to: 5000000 - type: integer 
+	Parameter WIDTH bound to: 60 - type: integer 
+	Parameter HEIGHT bound to: 60 - type: integer 
+	Parameter DISV_TOP bound to: 10'b0001111000 
+	Parameter DISV_DOWN bound to: 180 - type: integer 
+	Parameter DISH_LEFT bound to: 10'b0100001110 
+	Parameter DISH_RIGHT bound to: 330 - type: integer 
+	Parameter tick1 bound to: 200008 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:203]
+WARNING: [Synth 8-6090] variable 'flag_kaishi' is written by both blocking and non-blocking assignments, entire logic could be removed [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:355]
+WARNING: [Synth 8-6090] variable 'flag_jieshu' is written by both blocking and non-blocking assignments, entire logic could be removed [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:361]
+WARNING: [Synth 8-6014] Unused sequential element flag_on_reg was removed.  [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:245]
+WARNING: [Synth 8-6014] Unused sequential element rightbound_reg was removed.  [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:318]
+WARNING: [Synth 8-6014] Unused sequential element downbound_reg was removed.  [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:319]
+WARNING: [Synth 8-6014] Unused sequential element num_reg was removed.  [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:340]
+WARNING: [Synth 8-6014] Unused sequential element num_reg was removed.  [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:402]
+WARNING: [Synth 8-3848] Net led in module/entity VGA does not have driver. [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'VGA' (1#1) [F:/codes vivado/Hit_rat/project_9_05/V_file/VGA00.v:22]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[7]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[6]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[5]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[4]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[3]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[2]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[1]
+WARNING: [Synth 8-3331] design VGA has unconnected port led[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 935.367 ; gain = 118.805
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 935.367 ; gain = 118.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 935.367 ; gain = 118.805
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/codes vivado/Hit_rat/project_9_05/project_9_05.srcs/constrs_1/new/rat_VGA.xdc]
+Finished Parsing XDC File [F:/codes vivado/Hit_rat/project_9_05/project_9_05.srcs/constrs_1/new/rat_VGA.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1255.633 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1278.324 ; gain = 461.762
+7 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1278.324 ; gain = 461.762
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 19 20:28:14 2019...

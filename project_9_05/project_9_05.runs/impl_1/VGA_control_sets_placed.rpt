@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Sep 19 20:25:43 2019
+| Host         : LAPTOP-UH4UHBKT running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VGA_control_sets_placed.rpt
+| Design       : VGA
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    59 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      3 |            1 |
+|      4 |            3 |
+|      6 |            3 |
+|      9 |            1 |
+|     10 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              37 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             100 |           27 |
+| Yes          | No                    | No                     |               8 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-------------------+-------------------+------------------+----------------+
+|    Clock Signal   |   Enable Signal   |  Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+-------------------+-------------------+------------------+----------------+
+|  clk_50ms_reg_n_0 |                   |                   |                1 |              1 |
+|  clk_1s_reg_n_0   |                   |                   |                1 |              3 |
+|  vga_clk          | hcount[9]_i_1_n_0 |                   |                2 |              4 |
+|  clk_96hz_reg_n_0 |                   |                   |                2 |              4 |
+|  clk_96hz_reg_n_0 | Q                 |                   |                1 |              4 |
+|  vga_clk          | hcount[9]_i_1_n_0 | vcount            |                2 |              6 |
+|  clk_1s_reg_n_0   |                   | clear             |                2 |              6 |
+|  clk_1s_reg_n_0   | num1              | rst_IBUF          |                2 |              6 |
+|  vga_clk          |                   |                   |                3 |              9 |
+|  vga_clk          |                   | hcount[9]_i_1_n_0 |                4 |             10 |
+|  clock_IBUF_BUFG  |                   |                   |                7 |             20 |
+|  clock_IBUF_BUFG  |                   | clk_50ms          |                7 |             28 |
+|  clock_IBUF_BUFG  |                   | clk_1s            |                7 |             28 |
+|  clock_IBUF_BUFG  |                   | clk_96hz          |                7 |             28 |
++-------------------+-------------------+-------------------+------------------+----------------+
+
+

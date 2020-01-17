@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Sep 11 08:21:05 2019
+# Process ID: 8156
+# Current directory: F:/codes vivado/Hit_rat/project_9_05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3832 F:\codes vivado\Hit_rat\project_9_05\project_9_05.xpr
+# Log file: F:/codes vivado/Hit_rat/project_9_05/vivado.log
+# Journal file: F:/codes vivado/Hit_rat/project_9_05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/codes vivado/Hit_rat/project_9_05/project_9_05.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/Vivado/loadpath/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 768.477 ; gain = 173.629
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 775.766 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1699.469 ; gain = 923.703
+set_property PROGRAM.FILE {F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/VGA.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/VGA.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Sep 11 08:31:49 2019] Launched synth_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/synth_1/runme.log
+[Wed Sep 11 08:31:49 2019] Launched impl_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Sep 11 08:34:17 2019] Launched synth_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/synth_1/runme.log
+[Wed Sep 11 08:34:17 2019] Launched impl_1...
+Run output will be captured here: F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {F:/codes vivado/Hit_rat/project_9_05/project_9_05.runs/impl_1/VGA.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 11 17:11:44 2019...
